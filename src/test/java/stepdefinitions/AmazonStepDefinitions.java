@@ -59,4 +59,17 @@ public class AmazonStepDefinitions {
     public void kullaniciSayfayiKapatir() {
         Driver.closeDriver();
     }
+
+    @And("{string} icin arama yapar")
+    public void icinAramaYapar(String kelime) {
+        amazonPage.searchTextBox.sendKeys(kelime);
+        amazonPage.searchButton.click();
+    }
+
+    @Then("sonucun {string} icerdigini test eder")
+    public void sonucun_icerdigini_test_eder(String kelime) {
+       Assert.assertTrue(amazonPage.searchResult.getText().contains(kelime));
+    }
+
+
 }

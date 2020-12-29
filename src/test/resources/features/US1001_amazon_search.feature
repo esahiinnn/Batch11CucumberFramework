@@ -1,7 +1,9 @@
+@amazonarama
 Feature: US1001 amazon page search
+
   Scenario: TC01 amazon arama testi
     Given kullanici amazon anasayfaya gider
-    And iPhone icin arama yapar
+    And iphone icin arama yapar
     Then sonucun iphone icerdigini test eder
 
     Given kullanici amazon anasayfaya gider
