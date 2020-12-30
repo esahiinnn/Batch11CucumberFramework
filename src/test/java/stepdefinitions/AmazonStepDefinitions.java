@@ -71,5 +71,4 @@ public class AmazonStepDefinitions {
        Assert.assertTrue(amazonPage.searchResult.getText().contains(kelime));
     }
 
-
 }
