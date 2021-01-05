@@ -1,4 +1,4 @@
-
+@amazon
 Feature: US1001 amazon page search
 
   Scenario: TC01 amazon arama testi

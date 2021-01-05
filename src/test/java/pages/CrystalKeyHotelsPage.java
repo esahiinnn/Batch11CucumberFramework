@@ -29,4 +29,7 @@ public class CrystalKeyHotelsPage {
     @FindBy(xpath = "//*[text()=' Log out ']")
     public WebElement logOut;
 
+    @FindBy(xpath = "//div[@class='validation-summary-errors']")
+    public WebElement girilemedi;
+
 }

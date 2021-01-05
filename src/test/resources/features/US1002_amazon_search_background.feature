@@ -1,4 +1,4 @@
-
+@amazon
 Feature: US1002 Amazon search background
   #Before method ile ayni isleme sahiptir
   Background:

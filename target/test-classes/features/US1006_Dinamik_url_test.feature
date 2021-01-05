@@ -1,6 +1,7 @@
-
+@smoke
 Feature:US1006_Dinamik_url_test
 
+  @hook
   Scenario Outline: TC08_yazilan_her_url'e_gitmeli
 
     When kullanici "<istenenUrl>" anasayfaya gider

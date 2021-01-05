@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -48,4 +49,17 @@ public class CrystalKeyHotelsStepDefinitions {
         Driver.closeDriver();
     }
 
+    @Then("sayfaya giris yapamadigini kontrol eder")
+    public void sayfayaGirisYapamadiginiKontrolEder() {
+        Assert.assertTrue(crystalKeyHotelsPage.girilemedi.isDisplayed());
+    }
+
+    @Then("username text box'a {string} girer")
+    public void usernameTextBoxAGirer(String arg0) {
+        crystalKeyHotelsPage.usernameTextBox.sendKeys(arg0);
+    }
+    @Then("password text box'a {string} girer")
+    public void passwordTextBoxAGirer(String arg0) {
+        crystalKeyHotelsPage.usernameTextBox.sendKeys(arg0);
+    }
 }

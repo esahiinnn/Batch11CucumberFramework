@@ -19,7 +19,7 @@ public class AmazonStepDefinitions {
 
     }
 
-    @Given("iPhone icin arama yapar")
+    @Given("iphone icin arama yapar")
     public void i_phone_icin_arama_yapar() {
             amazonPage.searchTextBox.sendKeys(ConfigReader.getProperty("aranicak_kelime"));
             amazonPage.searchButton.click();
@@ -69,6 +69,12 @@ public class AmazonStepDefinitions {
     @Then("sonucun {string} icerdigini test eder")
     public void sonucun_icerdigini_test_eder(String kelime) {
        Assert.assertTrue(amazonPage.searchResult.getText().contains(kelime));
+    }
+
+    @And("amazon sayfasinda {string} icin arama yapar")
+    public void amazonSayfasindaIcinAramaYapar(String kelime) {
+        amazonPage.searchTextBox.sendKeys(kelime);
+        amazonPage.searchButton.click();
     }
 
 }

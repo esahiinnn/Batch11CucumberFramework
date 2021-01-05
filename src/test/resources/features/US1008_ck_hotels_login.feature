@@ -1,3 +1,4 @@
+@regression
 Feature: US1008 Ck Hotels Login
   Scenario: TC10 kullanici gecerli bilgilerle giris yapar
     Given kullanici Ck Hotels ana sayfasinda
