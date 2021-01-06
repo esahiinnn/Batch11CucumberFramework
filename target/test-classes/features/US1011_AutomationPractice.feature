@@ -1,5 +1,6 @@
-Feature: Zor soru
-  Scenario: Zor TEst case
+Feature: US1011_AutomationPractice
+
+  Scenario: TC14_Kullanici_yeni_giris_olusturabilmeli
     Given kullanici "automation_practice_url" anasayfaya gider
     And sign in butonuna basar
     Then email adress text box'ina valid mail girer
@@ -24,5 +25,12 @@ Feature: Zor soru
     And Home phone text boxina ev telefonu girer
     And Mobile phone text boxina cep telefonu girer
     And Register butonuna basar
+
+    @automation
+  Scenario: TC15_Gecersiz bilgilerle giris yapilamamali
+    Given kullanici "automation_practice_url" anasayfaya gider
+    And sign in butonuna basar
+    And email kutusuna gecersiz email adresi yazar ve enter'a tiklar
+    Then error mesajinin Authentication failed. oldugunu dogrulayin
 
 

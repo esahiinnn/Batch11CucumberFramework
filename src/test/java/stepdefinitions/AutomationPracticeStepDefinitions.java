@@ -1,7 +1,9 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -140,5 +142,17 @@ public class AutomationPracticeStepDefinitions {
     @Then("Register butonuna basar")
     public void register_butonuna_basar() {
        automationPracticePage.registerButton.click();
+    }
+
+    @Given("email kutusuna gecersiz email adresi yazar ve enter'a tiklar")
+    public void email_kutusuna_gecersiz_email_adresi_yazar_ve_enter_a_tiklar() throws InterruptedException {
+        automationPracticePage.emailTextBox.sendKeys(ConfigReader.getProperty("invalid_mail"));
+        automationPracticePage.createAnAccountButton.click();
+        Thread.sleep(1500);
+    }
+
+    @Then("error mesajinin Authentication failed. oldugunu dogrulayin")
+    public void error_mesajinin_authentication_failed_oldugunu_dogrulayin() {
+        Assert.assertTrue(automationPracticePage.errorMessage.getText().contains("Invalid"));
     }
 }

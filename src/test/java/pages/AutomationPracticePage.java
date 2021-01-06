@@ -38,6 +38,9 @@ public class AutomationPracticePage {
     @FindBy(xpath = "//select[@id='months']")
     public WebElement months;
 
+    @FindBy(xpath = "//*[text()='Invalid email address.']")
+    public WebElement errorMessage;
+
     @FindBy(xpath = "//select[@id='years']")
     public WebElement years;
 
