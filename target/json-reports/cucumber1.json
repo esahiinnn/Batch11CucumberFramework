@@ -1,0 +1,85 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-26T20:22:18.534Z",
+        "line": 4,
+        "name": "TC23_ Kullanici tHOTEL tablosundan mail fieldini okur",
+        "description": "",
+        "id": "us1015-dbutils-ile-yapilan-islemler;tc23--kullanici-thotel-tablosundan-mail-fieldini-okur",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2177000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "kullanici DBUtils ile CK_Hotels veritabanina baglanir",
+            "match": {
+              "location": "dbStepdefinitions.DbWithDBUtils.kullanici_db_utils_ile_ck_hotels_veritabanina_baglanir()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 299000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "kullanici DBUtils ile \"tHOTEL\" tablosundan \"Email\" verilerini okur",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tHOTEL\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Email\"",
+                  "offset": 43
+                }
+              ],
+              "location": "dbStepdefinitions.DbWithDBUtils.kullaniciDBUtilsIleTablosundanVerileriniOkur(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1246000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "IDHotel degeri 8 olan kaydin Email bilgisinin \"new@email\" oldugunu dogrular",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8",
+                  "offset": 15
+                },
+                {
+                  "val": "\"new@email\"",
+                  "offset": 46
+                }
+              ],
+              "location": "dbStepdefinitions.DbWithDBUtils.idhotelDegeriOlanKaydinEmailBilgisininOldugunuDogrular(int,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@dbread"
+          }
+        ]
+      }
+    ],
+    "name": "US1015_DBUtils ile yapilan islemler",
+    "description": "",
+    "id": "us1015-dbutils-ile-yapilan-islemler",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/US1015_DBUtils.feature",
+    "tags": []
+  }
+]
